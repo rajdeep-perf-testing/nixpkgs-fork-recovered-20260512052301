@@ -27,11 +27,13 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ poetry-core ];
 
-  dependencies = [ aiohttp ];
+  dependencies = [
+    aiohttp
+    pycryptodome
+  ];
 
   nativeCheckInputs = [
     aioresponses
-    pycryptodome
     pytest-asyncio
     pytest-cov-stub
     pytest-freezer
